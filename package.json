@@ -13,12 +13,13 @@
     "test": "tape test/*.js",
     "lint": "standard"
   },
-  "keywords": [
-  ],
+  "keywords": [],
   "dependencies": {},
   "devDependencies": {
-    "tape": "~4.6.2",
-    "standard": "~10.0.0"
+    "abstract-blob-store": "^3.3.4",
+    "rimraf": "^2.6.2",
+    "standard": "~10.0.0",
+    "tape": "~4.6.2"
   },
   "license": "ISC"
 }
