@@ -13,7 +13,7 @@ BlobStore.prototype.createWriteStream = function (opts, cb) {
   if (typeof opts === 'string') opts = {key:opts}
   if (opts.name && !opts.key) opts.key = opts.name
   return this.tarball.append(opts.key, opts.size || undefined, function (err) {
-    cb(err, {key:opts.key})
+    if (cb) cb(err, {key:opts.key})
   })
 }
 
