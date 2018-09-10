@@ -6,7 +6,8 @@ function BlobStore (opts) {
   if (!(this instanceof BlobStore)) return new BlobStore(opts)
   if (typeof opts === 'string') opts = {path:opts}
 
-  this.tarball = new IndexedTarball(opts.path, opts)
+  if (opts.tarball) this.tarball = opts.tarball
+  else this.tarball = new IndexedTarball(opts.path, opts)
 }
 
 BlobStore.prototype.createWriteStream = function (opts, cb) {
