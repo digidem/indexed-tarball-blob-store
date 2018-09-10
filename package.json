@@ -15,7 +15,7 @@
   },
   "keywords": [],
   "dependencies": {
-    "indexed-tarball": "^2.0.0"
+    "indexed-tarball": "^2.1.0"
   },
   "devDependencies": {
     "abstract-blob-store": "^3.3.4",

@@ -73,6 +73,7 @@ boolean.
 
 This method removes a blob from the store, but only if it is the last file in
 the tarball, since indexed-tarball only supports popping entries from the end.
+If the given key is not the last file in the tarball, an error is returned.
 
 If `opts` is a string it is interpreted as a `key`.
 

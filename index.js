@@ -33,7 +33,7 @@ BlobStore.prototype.exists = function (opts, cb) {
 BlobStore.prototype.remove = function (opts, cb) {
   if (typeof opts === 'string') opts = {key:opts}
   if (!opts) opts = noop
-  this.tarball.pop(cb)
+  this.tarball.pop(opts.key, cb)
 }
 
 BlobStore.prototype.list = function (cb) {
